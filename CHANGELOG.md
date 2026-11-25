@@ -9,10 +9,20 @@ mengonsumsi `github.com/rolldone/donisgo` sebagai dependency yang di-pin di
 `go.mod`, dan tidak dipublikasikan untuk di-`go get` (konsumsi lewat
 clone/fork — GitHub *Use this template*).
 
-## [Unreleased]
+## [0.1.0] — 2026-11-25
+
+Rilis pertama repo starter (SPEC-005 fase 1–5 lengkap).
 
 ### Added
 
+- **SPEC-005 fase 5 (rilis)** — bump dependency ke
+  `github.com/rolldone/donisgo v0.2.0` (pure library, BREAKING) dan
+  registrasi plugin `pages` **eksplisit** di `cmd/server/main.go` via
+  `plugins.Registry.EnsurePluginLast` (dijamin urutan terakhir) —
+  menggantikan auto-registration `internal/pluginloader` yang dihapus dari
+  donisgo v0.2.0. `main.go` kini memakai wiring eksplisit
+  `app.New(app.Config{Plugins: ...})` + `application.Run()`.
+- Tag pertama: `v0.1.0`.
 - **SPEC-005 fase 3** — terima scaffold + docs aplikasi dari repo `donisgo`
   (commit sumber `dfdd4f5`, 2026-11-25):
   - `console/` — paket console milik starter yang memuat generator

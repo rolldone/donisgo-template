@@ -121,8 +121,8 @@ github.com/redis/go-redis/v9 v9.18.0 h1:pMkxYPkEbMPwRdenAzUNyFNrDgHx9U+DrBabWNfS
 github.com/redis/go-redis/v9 v9.18.0/go.mod h1:k3ufPphLU5YXwNTUcCRXGxUoF1fqxnhFQmscfkCoDA0=
 github.com/rogpeppe/go-internal v1.14.1 h1:UQB4HGPB6osV0SQTLymcB4TgvyWu6ZyliaW0tI/otEQ=
 github.com/rogpeppe/go-internal v1.14.1/go.mod h1:MaRKkUm5W0goXpeCfT7UZI6fk/L7L7so1lCWt35ZSgc=
-github.com/rolldone/donisgo v0.1.4 h1:1uRjFMMiF/eNKqAJdtjX7mRPqYlWOglA1XUd7TeuS0A=
-github.com/rolldone/donisgo v0.1.4/go.mod h1:hJaA5PZSsDawQLrt6SkD3zEPXcDZt+GJBlrwWZzgARg=
+github.com/rolldone/donisgo v0.2.0 h1:GiMIWIQFDj2L0LTbNkbwdYoe7zuwCfQGY3esQBl4Ryw=
+github.com/rolldone/donisgo v0.2.0/go.mod h1:hJaA5PZSsDawQLrt6SkD3zEPXcDZt+GJBlrwWZzgARg=
 github.com/russross/blackfriday/v2 v2.1.0/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
 github.com/spf13/cobra v1.7.0 h1:hyqWnYt1ZQShIddO5kBpj3vu05/++x6tJ6dg8EC572I=
 github.com/spf13/cobra v1.7.0/go.mod h1:uLxZILRyS/50WlhOIKD7W6V5bgeIt+4sICxh6uRMrb0=
