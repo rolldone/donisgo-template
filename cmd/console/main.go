@@ -4,6 +4,10 @@ import (
 	"syscall"
 
 	"github.com/rolldone/donisgo/console"
+
+	// Register the starter's own console commands (plugin new) onto the
+	// framework root command.
+	_ "github.com/rolldone/donisgo-template/console"
 )
 
 func main() {
