@@ -1,0 +1,19 @@
+# Binaries
+cmd/server/server
+cmd/console/console
+*.exe
+*.test
+*.out
+
+# Frontend build & deps
+dist/
+node_modules/
+
+# Local config
+.env
+*.local
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
