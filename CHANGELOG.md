@@ -13,6 +13,23 @@ clone/fork — GitHub *Use this template*).
 
 ### Added
 
+- **SPEC-005 fase 3** — terima scaffold + docs aplikasi dari repo `donisgo`
+  (commit sumber `dfdd4f5`, 2026-11-25):
+  - `console/` — paket console milik starter yang memuat generator
+    `plugin new` (`console/plugin.go` + `console/plugin_test.go`, pindah utuh
+    per OQ-3) dan meregistrasi command tree-nya ke root CLI framework
+    (`github.com/rolldone/donisgo/console`).
+  - `sub_app/webapp/` — skeleton frontend (Vite + React) yang dilayani plugin
+    `pages` dari `./sub_app/webapp/dist`.
+  - `.env.example` — konfigurasi aplikasi (App/DB/JWT/KeyDB/SMTP/Storage/CORS/
+    TRUSTED_PROXIES), digabung & dirapikan dari `.env.example` donisgo.
+  - README starter diperkaya dengan docs app-level: quickstart, env, console
+    commands & migrasi, plugin development, plugin `pages`, storage, DB &
+    transaksi, security notes.
+- Import framework pada hasil scaffold `plugin new` selalu
+  `github.com/rolldone/donisgo/...` (`frameworkModulePath`, fix #13); paket
+  milik aplikasi mengikuti module path `go.mod`.
+
 - **SPEC-005 fase 2** — terima aset aplikasi dari repo `donisgo`
   (commit sumber `dfdd4f5`, 2026-11-25) sebagai *fresh copy* tanpa git history
   antar-repo:
@@ -28,6 +45,11 @@ clone/fork — GitHub *Use this template*).
 
 ### Notes
 
+- Semua aset fase 3 dipindahkan **utuh tanpa refactor** (OQ-3);
+  `migrate`/`seed` tidak diduplikasi (tetap memakai paket `console` donisgo).
+- Pada fase 3 command `plugin` masih muncul **dua kali** di root CLI (milik
+  donisgo `v0.1.x` + milik starter) — duplikasi sementara; implementasi
+  donisgo dihapus pada fase 4.
 - Import ke paket yang **tetap** di donisgo (`app`, `console`, kontrak
   `plugins`) tidak diubah — hanya isi aset yang dipindahkan.
 - Registrasi plugin `pages` dari sisi donisgo (`internal/pluginloader`)
